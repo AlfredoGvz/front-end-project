@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  color: black;
+}
+body {
+  background-color: aliceblue;
+}
+
+.gallery-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.inner-gallery-wrapper {
+  max-width: 70%;
+}
+.gallery-card-holder {
+  margin-block: 2rem;
+  border: 2px solid hotpink;
+  padding: 1rem;
+}
+.inner-card {
+  display: flex;
+  gap: 1rem;
+}
+
+.card-wrapper img {
+  width: 20rem;
+}
+
+.card-wrapper {
+  max-width: 80%;
+  margin-bottom: 1rem;
+}
