@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import fetchArticleById from "../custom_hooks/fetchArticleById";
 import fetchComments from "../custom_hooks/fetchComments";
+import ArticleComments from "./Article-Comments";
 
 export default function ArticlePage() {
   const { article_id } = useParams();
@@ -11,7 +12,6 @@ export default function ArticlePage() {
   const { data: comments } = fetchComments(
     `https://north-star-articles.onrender.com/api/articles/${article_id}/comments`
   );
-  console.log(article);
   return (
     <div>
       {isPending ? (
@@ -43,6 +43,8 @@ export default function ArticlePage() {
             </div>
 
             <div className="pb-12">{article.body}</div>
+            <div className="divider divider-neutral"></div>
+            <ArticleComments comments={comments} />
           </div>
         </div>
       )}
