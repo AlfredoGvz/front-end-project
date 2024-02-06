@@ -3,6 +3,7 @@ import axios from "axios";
 export default function fetchAllArticles(url) {
   const [data, setData] = useState([]);
   const [isPending, setIsPending] = useState(true);
+  const [errorFetchAllArticles, setErrorFetchAllArticles] = useState(null);
 
   useEffect(() => {
     axios
@@ -11,7 +12,10 @@ export default function fetchAllArticles(url) {
         setIsPending(false);
         setData(data.articles);
       })
-      .catch((err) => console.log(err));
+      .catch((error) => {
+        // handle error
+        setErrorFetchAllArticles(error);
+      });
   }, [url]);
-  return { data, isPending };
+  return { data, isPending, errorFetchAllArticles };
 }

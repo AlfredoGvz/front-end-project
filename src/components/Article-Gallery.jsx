@@ -3,9 +3,11 @@ import ArticleCard from "./Article-card";
 import fetchAllArticles from "../custom_hooks/fetchAllArticles";
 
 export default function ArticleGallery() {
-  const { data: articles, isPending } = fetchAllArticles(
-    "https://north-star-articles.onrender.com/api/articles"
-  );
+  const {
+    data: articles,
+    isPending,
+    errorFetchAllArticles,
+  } = fetchAllArticles("https://north-star-articles.onrender.com/api/articles");
   return (
     <div className="outer-gallery-wrapper">
       <div className="gallery-wrapper">
@@ -18,7 +20,7 @@ export default function ArticleGallery() {
         {articles.map((article) => {
           return (
             <Link
-              to={`/api/articles/${article.article_id}`}
+              to={`/articles/${article.article_id}`}
               key={article.article_id}
             >
               <ArticleCard article={article} />
