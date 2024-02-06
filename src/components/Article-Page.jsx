@@ -6,12 +6,17 @@ import ArticleComments from "./Article-Comments";
 export default function ArticlePage() {
   const { article_id } = useParams();
 
-  const { data: article, isPending } = fetchArticleById(
+  const {
+    data: article,
+    isPending,
+    errorFetchArticleById,
+  } = fetchArticleById(
     `https://north-star-articles.onrender.com/api/articles/${article_id}`
   );
-  const { data: comments } = fetchComments(
+  const { data: comments, errorFetchComments } = fetchComments(
     `https://north-star-articles.onrender.com/api/articles/${article_id}/comments`
   );
+
   return (
     <div>
       {isPending ? (
@@ -30,7 +35,7 @@ export default function ArticlePage() {
             <div className="text-sm breadcrumbs ">
               <ul>
                 <li>
-                  <Link to="/api/articles">Articles</Link>
+                  <Link to="/articles">Articles</Link>
                 </li>
                 <li>
                   <a>{article.topic}</a>
@@ -44,7 +49,10 @@ export default function ArticlePage() {
 
             <div className="pb-12">{article.body}</div>
             <div className="divider divider-neutral"></div>
-            <ArticleComments comments={comments} />
+            <ArticleComments
+              comments={comments}
+              errorComments={errorFetchComments}
+            />
           </div>
         </div>
       )}

@@ -4,17 +4,19 @@ import { useState, useEffect } from "react";
 export default function fetchComments(url) {
   const [data, setData] = useState([]);
   const [isPending, setIsPending] = useState(true);
+  const [errorFetchComments, setErrorFetchComments] = useState(null);
 
   useEffect(() => {
-    setTimeout(() => {
-      axios.get(url).then(
-        ({ data }) => {
-          setData(data);
-          setIsPending(false);
-        },
-        [url]
-      );
-    }, 1000);
-  }, []);
-  return { data, isPending };
+    axios
+      .get(url)
+      .then(({ data }) => {
+        setData(data);
+        setIsPending(false);
+      })
+      .catch((error) => {
+        // handle error
+        setErrorFetchComments(error);
+      });
+  }, [url]);
+  return { data, isPending, errorFetchComments };
 }
