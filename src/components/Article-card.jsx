@@ -1,22 +1,29 @@
-import { NavLink } from "react-router-dom";
 export default function ArticleCard({ article }) {
   return (
-    <div className="card-wrapper">
-      <div className="inner-card">
-        <img src={article.article_img_url} alt="" />
-        <div>
-          <div>
-            <p>{article.title}</p>
-            <p>By: {article.author}</p>
-            <p>Date: {article.created_at}</p>
-          </div>
-          <NavLink to={`/api/articles/${article.article_id}`}>
-            Take me there
-          </NavLink>
+    <div className="w-2/3  shadow-xl me-auto ms-auto bg-zinc-100">
+      <figure className=" ">
+        <img
+          src={article.article_img_url}
+          alt="Shoes"
+          className="me-auto ms-auto"
+        />
+      </figure>
+      <div className="card-body">
+        <h2 className="card-title">{article.title}</h2>
+        <div className="badge ">{article.topic}</div>
+        <p>by: {article.author}</p>
+        <div className="card-actions justify-end">
+          <button
+            className=""
+            onClick={(e) => {
+              console.dir(e.target);
+            }}
+          >
+            Read More!
+          </button>
         </div>
       </div>
     </div>
   );
 }
-
 //
