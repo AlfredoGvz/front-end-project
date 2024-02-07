@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-export default function ArticleComments({ comments, errorComments }) {
+export default function ArticleComments({ comments }) {
   if (comments.length === 0) {
     return <h2 className="text-xl pb-9">No Comments Available</h2>;
   } else {
