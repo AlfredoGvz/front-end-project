@@ -63,12 +63,12 @@ export default function ArticlePageContent({
               <div className="badge badge-secondary">{articleVotes}</div>
             </button>
           </div>
-
           <div className="img-banner mb-8 ">
             <img src={article.article_img_url} alt="" />
           </div>
           <div className="pb-12">{article.body}</div>
           <div className="divider divider-neutral"></div>
+          <ArticleComments comments={comments} />
         </div>
       </div>
     );

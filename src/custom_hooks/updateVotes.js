@@ -17,7 +17,6 @@ export function updateVotes(
 
   e.preventDefault();
   setActive(!active);
-  //   check();
   setArticleVotes((current) => current + vote);
   axios
     .patch(
