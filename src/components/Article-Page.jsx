@@ -21,6 +21,7 @@ export default function ArticlePage() {
       comments={comments}
       article={article}
       article_id={article_id}
+      isPending={isPending}
     />
   );
 }
