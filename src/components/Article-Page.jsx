@@ -10,12 +10,9 @@ export default function ArticlePage() {
     data: article,
     isPending,
     errorFetchArticleById,
-  } = fetchArticleById(
-    `https://north-star-articles.onrender.com/api/articles/${article_id}`
-  );
-  const { data: comments, errorFetchComments } = fetchComments(
-    `https://north-star-articles.onrender.com/api/articles/${article_id}/comments`
-  );
+  } = fetchArticleById(article_id);
+
+  const { data: comments, errorFetchComments } = fetchComments(article_id);
   return (
     <ArticlePageContent
       comments={comments}

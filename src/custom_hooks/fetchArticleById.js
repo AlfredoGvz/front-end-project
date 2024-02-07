@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-export default function fetchArticleById(url) {
+export default function fetchArticleById(article_id) {
+  const url = `https://north-star-articles.onrender.com/api/articles/${article_id}`;
   const [data, setData] = useState([]);
   const [isPending, setIsPending] = useState(true);
   const [errorFetchArticleById, setErrorFetchArticleById] = useState(null);
