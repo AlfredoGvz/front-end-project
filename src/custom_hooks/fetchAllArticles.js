@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-export default function fetchAllArticles(url) {
+
+export default function fetchAllArticles(
+  url = "https://north-star-articles.onrender.com/api/articles"
+) {
   const [data, setData] = useState([]);
   const [isPending, setIsPending] = useState(true);
   const [errorFetchAllArticles, setErrorFetchAllArticles] = useState(null);

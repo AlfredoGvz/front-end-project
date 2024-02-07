@@ -3,6 +3,7 @@ import Nav from "./components/Nav";
 import ArticleGallery from "./components/Article-Gallery";
 import ArticlePage from "./components/Article-Page";
 import Home from "./components/Home";
+import { createContext } from "react";
 
 function App() {
   return (

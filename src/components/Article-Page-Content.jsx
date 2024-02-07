@@ -9,9 +9,11 @@ export default function ArticlePageContent({
   isPenging,
 }) {
   let [active, setActive] = useState(true);
+
   let [vote, setVote] = useState(1);
   let [articleVotes, setArticleVotes] = useState(0);
   setVoteInit(article, setArticleVotes);
+
   if (isPenging) {
     return (
       <div>
