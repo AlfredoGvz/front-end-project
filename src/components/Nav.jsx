@@ -21,6 +21,13 @@ export default function Nav() {
                   >
                     See All Articles
                   </Link>
+
+                  <Link
+                    to="/post_new_article"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  >
+                    Post an Article
+                  </Link>
                 </div>
               </div>
             </div>

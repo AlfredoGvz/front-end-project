@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PostComment from "./Post-Comment.jsx";
 import ArticleComments from "./Article-Comments";
 import { useState } from "react";
 import { updateVotes, setVoteInit } from "../custom_hooks/updateVotes";
@@ -70,7 +71,7 @@ export default function ArticlePageContent({
           </div>
           <div className="pb-12">{article.body}</div>
           <div className="divider divider-neutral"></div>
-          <ArticleComments comments={comments} />
+          <ArticleComments comments={comments} article_id={article_id} />
         </div>
       </div>
     );
