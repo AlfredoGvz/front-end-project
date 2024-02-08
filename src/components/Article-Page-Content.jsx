@@ -6,7 +6,7 @@ export default function ArticlePageContent({
   comments,
   article,
   article_id,
-  isPenging,
+  isPending,
 }) {
   let [active, setActive] = useState(true);
 
@@ -14,12 +14,12 @@ export default function ArticlePageContent({
   let [articleVotes, setArticleVotes] = useState(0);
   setVoteInit(article, setArticleVotes);
 
-  if (isPenging) {
+  if (isPending) {
     return (
       <div>
-        <button type="button" classNanme="bg-indigo-500 ..." disabled>
+        <button type="button" className="bg-indigo-500 ..." disabled>
           <svg
-            classNanme="animate-spin h-5 w-5 mr-3 ..."
+            className="animate-spin h-5 w-5 mr-3 ..."
             viewBox="0 0 24 24"
           ></svg>
           Loading
@@ -70,7 +70,7 @@ export default function ArticlePageContent({
           </div>
           <div className="pb-12">{article.body}</div>
           <div className="divider divider-neutral"></div>
-          <ArticleComments comments={comments} />
+          <ArticleComments comments={comments} article_id={article_id} />
         </div>
       </div>
     );

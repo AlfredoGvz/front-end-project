@@ -16,7 +16,6 @@ export default function fetchAllArticles(
         setData(data.articles);
       })
       .catch((error) => {
-        // handle error
         setErrorFetchAllArticles(error);
       });
   }, [url]);

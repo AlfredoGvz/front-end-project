@@ -38,3 +38,22 @@ body {
 .img-banner img {
   width: 100%;
 }
+
+form * {
+  margin: auto;
+  background-color: aliceblue;
+  width: 95%;
+}
+
+.comment-modal textarea {
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+button {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 10px;
+}
