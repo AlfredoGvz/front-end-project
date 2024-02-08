@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import PostComment from "./Post-Comment.jsx";
 import ArticleComments from "./Article-Comments";
 import { useState } from "react";
 import { updateVotes, setVoteInit } from "../custom_hooks/updateVotes";
@@ -7,7 +6,7 @@ export default function ArticlePageContent({
   comments,
   article,
   article_id,
-  isPenging,
+  isPending,
 }) {
   let [active, setActive] = useState(true);
 
@@ -15,7 +14,7 @@ export default function ArticlePageContent({
   let [articleVotes, setArticleVotes] = useState(0);
   setVoteInit(article, setArticleVotes);
 
-  if (isPenging) {
+  if (isPending) {
     return (
       <div>
         <button type="button" classNanme="bg-indigo-500 ..." disabled>

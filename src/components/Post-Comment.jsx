@@ -6,7 +6,6 @@ import postComment from "../custom_hooks/postUtilities";
 export default function PostComment({ article_id, setCurrentComment }) {
   const userName = useContext(UserContext);
   const [comment, setComment] = useState("");
-  //   console.log(comments);
 
   return (
     <div className="comment-modal">

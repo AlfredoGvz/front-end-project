@@ -15,7 +15,6 @@ export default function fetchArticleById(article_id) {
         setData(data.article[0]);
       })
       .catch((error) => {
-        // handle error
         setErrorFetchArticleById(error);
       });
   }, []);
