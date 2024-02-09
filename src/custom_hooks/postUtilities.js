@@ -1,6 +1,12 @@
 import axios from "axios";
 
-function postComment(userName, comment, article_id, setCurrentComment) {
+function postComment(
+  userName,
+  comment,
+  article_id,
+  setCurrentComment,
+  setComment
+) {
   const requestBody = {
     username: userName,
     body: comment,
@@ -10,7 +16,10 @@ function postComment(userName, comment, article_id, setCurrentComment) {
       `https://north-star-articles.onrender.com/api/articles/${article_id}/comments`,
       requestBody
     )
-    .then((response) => setCurrentComment(response.data.comment));
+    .then((response) => {
+      setCurrentComment(response.data.comment);
+      setComment("");
+    });
 }
 
 export default postComment;

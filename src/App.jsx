@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 import ArticleGallery from "./components/Article-Gallery";
 import ArticlePage from "./components/Article-Page";
 import PostNewArticle from "./components/Post-Article";
@@ -29,6 +30,7 @@ function App() {
               element={<ArticlePage />}
             />
           </Routes>
+          {/* <Footer /> */}
         </BrowserRouter>
       </UserContext.Provider>
     </>
