@@ -6,7 +6,6 @@ export default function ArticleComments({ comments, article_id }) {
   const [currentComment, setCurrentComment] = useState([]);
 
   const miltipleComments = currentComment.concat(comments.comments);
-  console.log(miltipleComments);
   if (comments.length === 0) {
     return (
       <div>

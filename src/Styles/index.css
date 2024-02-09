@@ -39,21 +39,13 @@ body {
   width: 100%;
 }
 
-form * {
-  margin: auto;
-  background-color: aliceblue;
-  width: 95%;
+.post-comment-form button {
+  width: fit-content;
+  padding: 0.5rem;
+  border-radius: 6px;
 }
 
-.comment-modal textarea {
-  border: 1px solid;
+.post-comment-form textarea {
+  border: 1px solid black;
   border-radius: 5px;
-}
-
-button {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  padding: 1rem;
-  border-radius: 10px;
 }

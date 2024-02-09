@@ -23,7 +23,9 @@ export function updateVotes(
       `https://north-star-articles.onrender.com/api/articles/${article_id}`,
       { inc_votes: vote }
     )
-    .then((response) => console.log(response.data))
+    .then((response) => {
+      return response.data;
+    })
     .catch((error) => console.error(error));
 }
 

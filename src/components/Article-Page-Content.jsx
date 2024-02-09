@@ -17,7 +17,7 @@ export default function ArticlePageContent({
   if (isPending) {
     return (
       <div>
-        <button type="button" className="bg-indigo-500 ..." disabled>
+        <button type="button" className="bg-indigo-500 text-slate-50" disabled>
           <svg
             className="animate-spin h-5 w-5 mr-3 ..."
             viewBox="0 0 24 24"
@@ -48,7 +48,7 @@ export default function ArticlePageContent({
 
             <div className="flex justify-around"></div>
             <button
-              className="btn"
+              className="btn text-slate-50"
               onClick={(e) => {
                 updateVotes(
                   e,
@@ -62,7 +62,9 @@ export default function ArticlePageContent({
               }}
             >
               Like
-              <div className="badge badge-secondary">{articleVotes}</div>
+              <div className="badge  text-sky-50 bg-violet-500 p-3">
+                {articleVotes}
+              </div>
             </button>
           </div>
           <div className="img-banner mb-8 ">

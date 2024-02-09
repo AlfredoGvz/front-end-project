@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Modal from "./trial/Modal";
 export default function Home() {
   return (
     <div className="hero fixed bottom-0 top-0 hero-own">
