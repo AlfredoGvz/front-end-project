@@ -1,6 +1,6 @@
 export default function PostNewArticle() {
   return (
-    <form className="p-12">
+    <form className="p-12 post-article-form">
       <div className="space-y-12 outer-gallery-wrapper m-auto">
         <div className="border-b border-gray-900/10">
           <h2 className="text-base font-semibold leading-7 text-gray-900">
