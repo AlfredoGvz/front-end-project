@@ -3,28 +3,26 @@ export default function PostNewArticle() {
     <div className="w-9/12 m-auto">
       <form className="p-12 post-article-form">
         <div className="space-y-12 outer-gallery-wrapper m-auto">
-          <div className="border-b border-gray-900/10">
-            <h2 className="text-base font-semibold leading-7 text-gray-900">
-              Your new post!
-            </h2>
+          <h2 className="text-base font-semibold leading-7 text-gray-900">
+            Your new post!
+          </h2>
 
-            <div className="mt-10  gap-x-6 gap-y-8">
-              <div className="">
-                <label
-                  htmlFor="author"
-                  className="block text-sm font-medium leading-6 text-gray-900"
-                >
-                  Title
-                </label>
-                <div className="mt-2">
-                  <input
-                    type="text"
-                    name="author"
-                    id="author"
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300
+          <div className="mt-10">
+            <div className="">
+              <label
+                htmlFor="author"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
+                Title
+              </label>
+              <div className="mt-1 w-10/12">
+                <input
+                  type="text"
+                  name="author"
+                  id="author"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300
                   placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2"
-                  />
-                </div>
+                />
               </div>
 
               <div className="mt-7">
@@ -40,7 +38,7 @@ export default function PostNewArticle() {
                     name="body"
                     rows="5"
                     cols="2"
-                    className="block w-full rounded-md border-0 py-1.5 sshadow-sm 
+                    className="block w-full h-80 rounded-md border-0 py-1.5 sshadow-sm
                   ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2"
                   ></textarea>
                 </div>
@@ -49,7 +47,7 @@ export default function PostNewArticle() {
           </div>
 
           <div className="border-b border-gray-900/10 pb-12">
-            <div className="mt-10  gap-x-6 gap-y-8 ">
+            <div className="mt-10">
               <div className="sm:col-span-4">
                 <label
                   htmlFor="author"
@@ -57,7 +55,7 @@ export default function PostNewArticle() {
                 >
                   User name
                 </label>
-                <div className="mt-2">
+                <div className="mt-2 w-10/12">
                   <input
                     type="text"
                     name="author"
@@ -75,7 +73,7 @@ export default function PostNewArticle() {
                 >
                   Submit image URL
                 </label>
-                <div className="mt-1">
+                <div className="mt-1 w-10/12">
                   <input
                     id="article_img_url"
                     name="article_img_url"
@@ -85,26 +83,25 @@ export default function PostNewArticle() {
                   />
                 </div>
               </div>
-
-              <div className="mt-7">
-                <label
-                  htmlFor="topic"
-                  className="block text-sm font-medium leading-6 text-gray-900"
-                >
-                  Article topic
-                </label>
-                <div className="mt-1">
-                  <select
-                    id="topic"
-                    name="topic"
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 
+            </div>
+            <div className="mt-7">
+              <label
+                htmlFor="topic"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
+                Article topic
+              </label>
+              <div className="mt-1">
+                <select
+                  id="topic"
+                  name="topic"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1
                   ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6 p-2"
-                  >
-                    <option>Coding</option>
-                    <option>Football</option>
-                    <option>Cooking</option>
-                  </select>
-                </div>
+                >
+                  <option>Coding</option>
+                  <option>Football</option>
+                  <option>Cooking</option>
+                </select>
               </div>
             </div>
           </div>
