@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Modal from "./trial/Modal";
 export default function Home() {
   return (
     <div className="hero fixed bottom-0 top-0 hero-own">
@@ -8,9 +7,7 @@ export default function Home() {
         <div className="max-w-md">
           <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
           <p className="mb-5">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+            Get beyond the headlines and understand the real story!
           </p>
           <Link className="btn" to="/articles">
             Get Started
