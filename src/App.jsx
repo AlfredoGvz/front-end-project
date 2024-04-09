@@ -18,7 +18,7 @@ function App() {
           <Routes>
             <Route
               exact
-              path={"/verify-email"}
+              path={"/post_new_article"}
               element={<PostNewArticle />}
             />
             <Route exact path="/" element={<Home />} />
